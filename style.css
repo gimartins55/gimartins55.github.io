@@ -1,0 +1,449 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f1eb;
+    color: #222;
+}
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+header {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f1eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd6cd;
+}
+.logo,
+.footer-logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.logo {
+    font-size: 21px;
+}
+.logo span,
+.footer-logo span {
+    color: #b26d4b;
+}
+nav {
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+nav a:hover {
+    color: #b26d4b;
+}
+.hero {
+    min-height: 85vh;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-text {
+    max-width: 650px;
+}
+.mini-title {
+    color: #b26d4b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(60px, 9vw, 110px);
+    line-height: .9;
+}
+.hero h1 span {
+    color: #b26d4b;
+}
+.description {
+    max-width: 500px;
+    margin-top: 25px;
+    color: #666;
+    line-height: 1.7;
+}
+.hero-decoration {
+    width: 360px;
+    height: 360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-decoration::before {
+    content: "";
+    position: absolute;
+    width: 285px;
+    height: 285px;
+    background: #d9c4b6;
+    border-radius: 50%;
+}
+.hero-decoration::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #b26d4b;
+    border-radius: 50%;
+}
+.profile-photo {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 4px solid #f5f1eb;
+}
+.section {
+    padding: 80px 10%;
+}
+.dark {
+    background: #242321;
+    color: white;
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+.section-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+}
+.about,
+.contact-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 50px;
+    align-items: center;
+}
+.image-box {
+    height: 380px;
+    background: #d9c4b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-box span {
+    font-family: 'Playfair Display', serif;
+    font-size: 150px;
+    color: #b26d4b;
+}
+.about-text h3,
+.experience-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.about-text p,
+.experience-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.formation-card {
+    max-width: 800px;
+    padding: 35px;
+    display: flex;
+    gap: 25px;
+    border: 1px solid #484644;
+    background: #2b2a28;
+}
+.formation-icon,
+.experience-icon {
+    min-width: 65px;
+    height: 65px;
+    background: #b26d4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.formation-card h3 {
+    margin-bottom: 8px;
+}
+.school,
+.job {
+    color: #c98c6d !important;
+    font-weight: 700;
+    margin-bottom: 12px !important;
+}
+.formation-card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+.semester {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 14px;
+    background: #b26d4b;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+}
+.experience {
+    margin-top: 55px;
+}
+.experience-title {
+    font-family: 'Playfair Display', serif;
+}
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.experience-card {
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    background: #2b2a28;
+    border: 1px solid #484644;
+}
+.experience-card h3 {
+    margin-bottom: 8px;
+}
+.experience-card p {
+    color: #bbb;
+}
+.experience-icon {
+    flex-shrink: 0;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+}
+.card {
+    padding: 30px;
+    background: white;
+    border: 1px solid #e0d9d1;
+    transition: .3s;
+}
+.card:hover {
+    border-color: #b26d4b;
+    transform: translateY(-5px);
+}
+.card-logo {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+.card i,
+.hobby i {
+    color: #b26d4b;
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: block;
+}
+.card h3,
+.hobby h3 {
+    margin-bottom: 12px;
+}
+.card p,
+.hobby p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.hobby {
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #444;
+    transition: .3s;
+}
+.hobby:hover {
+    border-color: #b26d4b;
+    transform: translateY(-5px);
+}
+.hobby p {
+    color: #aaa;
+}
+.social {
+    padding: 50px 10%;
+    text-align: center;
+    background: #d9c4b6;
+}
+.social p {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    color: white;
+}
+.social-icons a:hover {
+    background: #b26d4b;
+    transform: translateY(-3px);
+}
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    color: #666;
+    line-height: 1.7;
+}
+.contact-item {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.contact-item i {
+    min-width: 25px;
+    margin-right: 10px;
+    color: #b26d4b;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd6cd;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+input:focus,
+textarea:focus {
+    border-color: #b26d4b;
+}
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+button {
+    padding: 15px;
+    border: none;
+    background: #222;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover {
+    background: #b26d4b;
+}
+footer {
+    padding: 30px 10%;
+    background: #1d1c1a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p {
+    color: #999;
+    font-size: 12px;
+}
+@media (max-width: 900px) {
+    header {
+        height: auto;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero {
+        padding: 60px 7%;
+        text-align: center;
+        justify-content: center;
+    }
+    .hero-decoration {
+        display: none;
+    }
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about,
+    .contact-content,
+    .cards,
+    .hobbies,
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    .section {
+        padding: 60px 7%;
+    }
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .hero h1 {
+        font-size: 58px;
+    }
+    .section-title h2 {
+        font-size: 32px;
+    }
+    .section-logo {
+        width: 32px;
+        height: 32px;
+    }
+    .image-box {
+        height: 300px;
+    }
+    .formation-card,
+    .experience-card {
+        flex-direction: column;
+    }
+    .section {
+        padding: 50px 6%;
+    }
+}
