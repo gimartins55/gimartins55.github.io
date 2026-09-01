@@ -147,15 +147,17 @@ nav a:hover {
 }
 .image-box {
     height: 380px;
-    background: #d9c4b6;
+    /* background: #d9c4b6; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.image-box span {
-    font-family: 'Playfair Display', serif;
-    font-size: 150px;
-    color: #b26d4b;
+.image-box img {
+    height: 380px;
+    width: 100%;
+    background-size: cover;
+    width: auto;
+
 }
 .about-text h3,
 .experience-title {
